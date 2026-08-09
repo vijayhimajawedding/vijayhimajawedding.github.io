@@ -372,7 +372,7 @@ Lunch.reveal=function(){
 
         Controller.hint.textContent=
 
-            "Tap Outside the Invitation to Continue";
+            "✦Tap outside the invitation to continue✦";
 
         Controller.hint.classList.add("show");
 
@@ -414,7 +414,7 @@ Lunch.showInvitation=function(){
 
     Controller.hint.textContent=
 
-        "Tap Outside the Invitation to Continue";
+        "✦Tap outside the invitation to continue✦";
 
     Controller.hint.classList.add("show");
 
@@ -504,7 +504,7 @@ Lunch.start=function(){
 
     Controller.instruction.innerHTML=
 
-        "Clean the banana leaf.";
+        "Drag the hand to clean the leaf.";
 
     Controller.hint.classList.remove("show");
 

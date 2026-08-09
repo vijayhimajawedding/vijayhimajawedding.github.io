@@ -236,7 +236,7 @@ Controller.data = {
         title:"Haldi",
 
         instruction:
-        "Scratch the turmeric layer."
+        "Rub the turmeric layer."
 
     },
 
@@ -245,7 +245,7 @@ Controller.data = {
         title:"Mehendi",
 
         instruction:
-        "Draw beautiful mehendi."
+        "Draw mehendi on each petal."
 
     },
 
@@ -263,7 +263,7 @@ Controller.data = {
         title:"Lunch",
 
         instruction:
-        "Wipe the banana leaf."
+        "Drag the hand to clean the leaf."
 
     }
 

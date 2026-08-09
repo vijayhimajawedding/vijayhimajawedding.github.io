@@ -58,26 +58,50 @@ document.querySelectorAll(".person-card,.time-box,.timeline-content").forEach(el
 });
 
 const form = document.querySelector(".rsvp-form");
-const popup = document.getElementById("successPopup");
-const closePopup = document.getElementById("closePopup");
-form.addEventListener("submit", function(e){
-    e.preventDefault();
-    popup.classList.add("show");
-    setTimeout(()=>{
-        popup.classList.remove("show");
-    },3000);
-    form.reset();
+
+const sideButtons = document.querySelectorAll(".side-icon");
+const sideInput = document.getElementById("rsvpSide");
+
+sideButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+
+        sideButtons.forEach(b => {
+            b.classList.remove("selected", "pop");
+        });
+
+        btn.classList.add("selected");
+
+        // Force reflow so the pop animation
+        // replays every time it's clicked
+        void btn.offsetWidth;
+
+        btn.classList.add("pop");
+
+        sideInput.value = btn.dataset.side;
+
+        // Ripple effect at the tap point
+        const circle = btn.querySelector(".icon-circle");
+        const rect = circle.getBoundingClientRect();
+
+        const size = Math.max(rect.width, rect.height);
+        const x = (e.clientX ?? rect.left + rect.width / 2) - rect.left - size / 2;
+        const y = (e.clientY ?? rect.top + rect.height / 2) - rect.top - size / 2;
+
+        const ripple = document.createElement("span");
+        ripple.className = "ripple";
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.left = x + "px";
+        ripple.style.top = y + "px";
+
+        circle.appendChild(ripple);
+
+        ripple.addEventListener("animationend", () => {
+            ripple.remove();
+        });
+
+    });
 });
 
-closePopup.addEventListener("click",()=>{
-    popup.classList.remove("show");
-});
-
-popup.addEventListener("click",(e)=>{
-    if(e.target===popup){
-        popup.classList.remove("show");
-    }
-});
 
 const galleryItems = document.querySelectorAll(".gallery-item");
 const lightbox = document.getElementById("lightbox");
@@ -1618,3 +1642,107 @@ function showCompletedLunch(){
     Celebration.hint.textContent="✦ Tap outside the invitation to continue ✦";
     Celebration.hint.classList.add("show");
 }*/
+
+document.querySelector(".rsvp-form")
+
+.addEventListener(
+
+"submit",
+
+function(e){
+
+    e.preventDefault();
+
+    document
+        .getElementById("rsvpSuccess")
+        .classList.add("show");
+
+});
+
+const rsvpForm = document.querySelector(".rsvp-form");
+
+document
+.getElementById("successClose")
+.addEventListener("click",()=>{
+
+    document
+        .getElementById("rsvpSuccess")
+        .classList.remove("show");
+
+    rsvpForm.reset();
+
+    document
+        .querySelectorAll(".side-icon")
+        .forEach(icon=>{
+
+            icon.classList.remove(
+                "selected",
+                "pop"
+            );
+
+        });
+
+    document
+        .getElementById("rsvpSide")
+        .value = "";
+
+});
+
+/*=========================
+    CUSTOM RSVP DROPDOWN
+=========================*/
+
+const customSelect =
+document.getElementById("attendanceSelect");
+
+const trigger =
+customSelect.querySelector(".select-trigger");
+
+const selectedText =
+customSelect.querySelector(".selected-text");
+
+const hiddenInput =
+document.getElementById("attendanceValue");
+
+const options =
+customSelect.querySelectorAll(".select-option");
+
+trigger.addEventListener("click", () => {
+
+    customSelect.classList.toggle("open");
+
+});
+
+options.forEach(option => {
+
+    option.addEventListener("click", () => {
+
+        options.forEach(o=>{
+
+            o.classList.remove("selected");
+
+        });
+
+        option.classList.add("selected");
+
+        selectedText.textContent =
+            option.textContent;
+
+        hiddenInput.value =
+            option.dataset.value;
+
+        customSelect.classList.remove("open");
+
+    });
+
+});
+
+document.addEventListener("click", (e) => {
+
+    if(!customSelect.contains(e.target)){
+
+        customSelect.classList.remove("open");
+
+    }
+
+});

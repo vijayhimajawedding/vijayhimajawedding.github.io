@@ -190,7 +190,7 @@ if(progress){
     Controller.instruction.style.display = "none";
 
     Controller.hint.textContent =
-        "Tap Outside the Invitation to Continue";
+        "✦Tap outside the invitation to continue✦";
 
     Controller.hint.classList.add("show");
 
@@ -248,7 +248,7 @@ requestAnimationFrame(()=>{
     Controller.instruction.style.display = "none";
 
     Controller.hint.textContent =
-        "Tap Outside the Invitation to Continue";
+        "✦Tap outside the invitation to continue✦";
 
     Controller.hint.classList.add("show");
 

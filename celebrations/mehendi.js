@@ -190,7 +190,7 @@ this.lastPaintPoint.right=null;
 Controller.instruction.style.opacity = "1";
 
 Controller.instruction.innerHTML =
-    "Draw beautiful mehendi.";
+    "Draw mehendi on each petal.";
 
     Controller.hint.classList.remove("show");
 
@@ -278,7 +278,7 @@ setTimeout(()=>{
 Controller.instruction.style.display = "none";
 
 Controller.hint.textContent =
-    "Tap Outside the Invitation to Continue";
+    "✦Tap outside the invitation to continue✦";
 
 Controller.hint.classList.add("show");
 
@@ -312,7 +312,7 @@ Mehendi.showInvitation=function(){
     Controller.instruction.style.display = "none";
 
     Controller.hint.textContent =
-        "Tap Outside the Invitation to Continue";
+        "✦Tap outside the invitation to continue✦";
 
     Controller.hint.classList.add("show");
 

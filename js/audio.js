@@ -41,3 +41,39 @@ function crossFade(fromAudio, toAudio, duration = 1000, targetVolume = 1) {
     toAudio.volume = 0;
     fadeIn(toAudio, duration, targetVolume);
 }
+
+document.addEventListener("visibilitychange", () => {
+
+    if (document.hidden) {
+
+        landingMusic.pause();
+
+        openingMusic.pause();
+
+        weddingMusic.pause();
+
+    } else {
+
+        if (
+            document.getElementById("landingContainer")
+        ) {
+
+            if (!introUnlocked) {
+
+                landingMusic.play().catch(() => {});
+
+            } else {
+
+                openingMusic.play().catch(() => {});
+
+            }
+
+        } else {
+
+            weddingMusic.play().catch(() => {});
+
+        }
+
+    }
+
+});

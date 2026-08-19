@@ -546,49 +546,45 @@ const data = {
 
 };
 
-try{
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("phone", data.phone);
-    formData.append("side", data.side);
-    formData.append("attendance", data.attendance);
-    formData.append("wishes", data.wishes);
-    formData.append("device", data.device);
+const formData = new FormData();
+formData.append("name", data.name);
+formData.append("phone", data.phone);
+formData.append("side", data.side);
+formData.append("attendance", data.attendance);
+formData.append("wishes", data.wishes);
+formData.append("device", data.device);
 
-    await fetch(SCRIPT_URL,{
-        method:"POST",
-        mode:"no-cors",
-        body: formData
-    });
+// no-cors means we can't read the response body anyway, so we
+// don't wait on it — fire the request in the background and let
+// the sheet write happen server-side while we show the modal
+// right away instead of leaving the guest staring at a spinner.
 
-    // no-cors means we can't read the response body,
-    // so we treat "the request completed without throwing"
-    // as success — the sheet write already happens reliably
-    // server-side regardless of whether we can read the reply.
-
-    const title = document.getElementById("successTitle");
-    const msg1 = document.getElementById("successMessage1");
-    const msg2 = document.getElementById("successMessage2");
-    const date = document.getElementById("successDate");
-
-    if(data.attendance === "yes"){
-        title.textContent = "Thank You!";
-        msg1.textContent = "Your RSVP has been received with love.";
-        msg2.textContent = "We are delighted that you'll be celebrating our special day with us.";
-        date.textContent = "See you on 5 September 2026 ❤️";
-    }else{
-        title.textContent = "Thank You!";
-        msg1.textContent = "We'll surely miss having you with us.";
-        msg2.textContent = "Thank you for your warm wishes and blessings.";
-        date.textContent = "With Love, Vijay & Himaja ❤️";
-    }
-
-    document.getElementById("rsvpSuccess").classList.add("show");
-
-}catch(error){
+fetch(SCRIPT_URL,{
+    method:"POST",
+    mode:"no-cors",
+    body: formData
+}).catch((error) => {
     console.error(error);
-    alert("Network error. Please check your connection and try again.");
+});
+
+const title = document.getElementById("successTitle");
+const msg1 = document.getElementById("successMessage1");
+const msg2 = document.getElementById("successMessage2");
+const date = document.getElementById("successDate");
+
+if(data.attendance === "yes"){
+    title.textContent = "Thank You!";
+    msg1.textContent = "Your RSVP has been received with love.";
+    msg2.textContent = "We are delighted that you'll be celebrating our special day with us.";
+    date.textContent = "See you on 5 September 2026 ❤️";
+}else{
+    title.textContent = "Thank You!";
+    msg1.textContent = "We'll surely miss having you with us.";
+    msg2.textContent = "Thank you for your warm wishes and blessings.";
+    date.textContent = "With Love, Vijay & Himaja ❤️";
 }
+
+document.getElementById("rsvpSuccess").classList.add("show");
 });
 
 const rsvpForm = document.querySelector(".rsvp-form");

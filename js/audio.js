@@ -42,38 +42,60 @@ function crossFade(fromAudio, toAudio, duration = 1000, targetVolume = 1) {
     fadeIn(toAudio, duration, targetVolume);
 }
 
-document.addEventListener("visibilitychange", () => {
+function pauseAllMusic() {
+    landingMusic.pause();
+    openingMusic.pause();
+    weddingMusic.pause();
+}
 
-    if (document.hidden) {
+function resumeAppropriateMusic() {
 
-        landingMusic.pause();
+    // Guard against firing while the tab is still actually hidden
+    // (e.g. a stray "focus" event) or when nothing is unlocked yet
+    if (document.hidden) return;
 
-        openingMusic.pause();
+    if (document.getElementById("landingContainer")) {
 
-        weddingMusic.pause();
+        if (!introUnlocked) {
 
-    } else {
-
-        if (
-            document.getElementById("landingContainer")
-        ) {
-
-            if (!introUnlocked) {
-
-                landingMusic.play().catch(() => {});
-
-            } else {
-
-                openingMusic.play().catch(() => {});
-
-            }
+            landingMusic.play().catch(() => {});
 
         } else {
 
-            weddingMusic.play().catch(() => {});
+            openingMusic.play().catch(() => {});
 
         }
 
+    } else {
+
+        weddingMusic.play().catch(() => {});
+
+    }
+
+}
+
+document.addEventListener("visibilitychange", () => {
+
+    if (document.hidden) {
+        pauseAllMusic();
+    } else {
+        resumeAppropriateMusic();
     }
 
 });
+
+// visibilitychange alone is NOT reliable on many mobile browsers,
+// especially in-app webviews (WhatsApp, Instagram, Facebook, etc.)
+// which is exactly how a wedding invite link is usually opened.
+// These are used as fallbacks to make sure music actually stops
+// when the user leaves the page/app.
+
+window.addEventListener("pagehide", pauseAllMusic);
+
+window.addEventListener("blur", pauseAllMusic);
+
+window.addEventListener("focus", resumeAppropriateMusic);
+
+// Page Lifecycle API - fired when the browser freezes a
+// backgrounded tab (mainly Chrome/Android)
+document.addEventListener("freeze", pauseAllMusic);

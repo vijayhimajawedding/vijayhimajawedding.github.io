@@ -14,26 +14,21 @@
     <title>Vijay ❤️ Himaja</title>
 
     <link rel="stylesheet" href="css/landing.css">
-
     <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/luxury.css">
-
+    <link rel="stylesheet" href="css/luxury.css">
+    <link rel="stylesheet" href="celebrations/celebrations.css">
     <link rel="icon" href="assets/icons/favicon.png">
-
     <link rel="icon" type="image/png" href="assets/icons/favicon.png">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap"
-      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
     <meta name="description" content="Wedding Invitation of Vijay & Himaja">
-<meta name="theme-color" content="#b76e79">
+    <meta name="theme-color" content="#b76e79">
 
-<meta property="og:title" content="Vijay ❤️ Himaja Wedding">
-<meta property="og:description" content="Join us to celebrate our wedding.">
-<meta property="og:image" content="assets/images/preview.jpg">
+    <meta property="og:title" content="Vijay ❤️ Himaja Wedding">
+    <meta property="og:description" content="Join us to celebrate our wedding.">
+    <meta property="og:image" content="assets/images/preview.jpg">
 
 </head>
 
@@ -44,650 +39,888 @@
     <!-- Landing Video -->
 
     <div id="landingContainer">
-
         <video
-    id="introVideo"
-    autoplay
-    muted
-    playsinline
-    preload="auto">
-
-    <source
-        src="assets/videos/intro.mp4"
-        type="video/mp4">
-
-</video>
-
-        <!--<video id="landingVideo"
-               autoplay
-               muted
-               loop
-               playsinline>
-
-            <source src="assets/videos/landing.mp4"
-                    type="video/mp4">
-
-        </video>-->
-
+            id="introVideo"
+            autoplay
+            muted
+            playsinline
+            preload="auto">
+            <source src="assets/videos/intro-compressed.mp4" type="video/mp4">
+        </video>
         <button id="seal"></button>
-
     </div>
 
+    <main id="website">   
 
+        <!-- Floating Petals -->
 
-    <!-- Opening Video -->
+        <div id="petals-container"></div>
+        <div id="sparkles"></div>
+        <div class="petals">
+            <span>🌸</span>
+            <span>🌺</span>
+            <span>🌸</span>
+            <span>🌼</span>
+            <span>🌸</span>
+            <span>🌺</span>
+            <span>🌸</span>
+            <span>🌼</span>
+            <span>🌸</span>
+            <span>🌺</span>
+        </div>
+        <div id="progressBar"></div>
+        <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!--<div id="openingContainer">
+        <header class="hero" id="home">
 
-        <video
-    id="openingVideo"
-    preload="auto"
-    playsinline>
+            <div class="hero-card">
 
-    <source src="assets/videos/opening.mp4"
-            type="video/mp4">
+                <!-- Main Invitation -->
 
-</video>
+                <img src="assets/images/hero-card.png" alt="Wedding Invitation" class="hero-card-image">
+            </div>
+            <div class="hero-teaser" id="heroTeaser">
+            <div class="hero-teaser-icon">✨</div>
+                <p class="hero-teaser-text">
+                    A Special Moment Awaits...
+                </p>
+                <div class="hero-scroll">
+                    ↓ Scroll to Reveal ↓
+                </div>
+            </div>
 
-    </div>-->
+        </header>
 
-    <main id="website">
+        <div id="dateRevealTrigger"></div>
 
+        <div class="divider">
+            <span class="line"></span>
+            <span class="ornament">❦</span>
+            <span class="line"></span>
+        </div>
+
+        <section id="countdown">
+
+            <div class="countdown-container">
+                <h2 class="section-title">Counting Down to Our Forever</h2>
+                <p class="countdown-text">
+                    Every second brings us closer to our special day.
+                </p>
+                <div class="countdown-boxes">
+                    <div class="time-box luxury-card">
+                        <div class="shine"></div>
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-box luxury-card">
+                        <div class="shine"></div>
+                        <span id="hours">00</span>
+                        <p>HRS</p>
+                    </div>
+                    <div class="time-box luxury-card">
+                        <div class="shine"></div>
+                        <span id="minutes">00</span>
+                        <p>MIN</p>
+                    </div>
+                    <div class="time-box luxury-card">
+                        <div class="shine"></div>
+                        <span id="seconds">00</span>
+                        <p>SEC</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="divider">
+            <span class="line"></span>
+            <span class="ornament">❦</span>
+            <span class="line"></span>
+        </div>
+
+        <section id="couple">
+
+            <h2 class="section-title couple-title">Meet the Couple</h2>
+            <div class="couple-container">
+                <div class="person-card">
+                    <img src="assets/images/Groom.png" alt="Groom" loading="lazy">
+                    <h3>Vijay</h3>
+                    <p>The Groom</p>      
+                </div>
+                <div class="heart-divider">
+                    ❤️
+                </div>
+                <div class="person-card">
+                    <img src="assets/images/bride.jpg" alt="Bride" loading="lazy">
+                    <h3>Himaja</h3>
+                    <p>The Bride</p>    
+                </div>
+            </div>
+
+        </section>
+
+        <div class="divider">
+            <span class="line"></span>
+            <span class="ornament">❦</span>
+            <span class="line"></span>
+        </div>
+
+        <!-- =================================
+                    OUR CELEBRATION
+        ================================== -->
+
+        <section id="celebration" class="celebration-section">
+
+            <div class="container">
+                <h2 class="section-title">Wedding Celebrations</h2>
+                <p class="celebration-subtitle">
+                    Every ceremony has a story.<br>
+                    Tap each milestone to experience it.
+                </p>
+                <div class="celebration-list">
+                    <div class="timeline-lotus" id="timelineLotus">
+                        <img src="assets/images/lotus.png" alt="Timeline Ornament" class="timeline-lotus-img">
+                    </div>
+                    <div class="timeline">            
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot" id="dot-haldi"></div>
+                        <div class="timeline-dot" id="dot-mehendi"></div>
+                        <div class="timeline-dot" id="dot-wedding"></div>
+                        <div class="timeline-dot" id="dot-lunch"></div>
+                    </div>
+
+                    <!-- HALDI -->
+
+                    <div class="celebration-row first-row" id="haldi-row">
+                        <div class="event-column">
+                            <h3 class="event-title">
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                                <span>Haldi</span>
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                            </h3>
+                            <p class="event-subtitle">
+                                Mangala Neerattu Vizha
+                            </p>
+                            <div class="event-details">
+                                <p>🕒 5:00 PM onwards</p>
+                                <p>📍 Our Residence, Kakinada</p>
+                            </div>
+                            <p class="event-quote">
+                            "Turmeric, laughter and the very first blessings."
+                            </p>
+                        </div>
+                        <div class="card-column">
+                            <div class="event-card locked" data-event="haldi">
+                                <img src="assets/images/haldi-card.png">
+                                <div class="card-overlay">
+                                ✦ TAP TO REVEAL ✦
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MEHENDI -->
+
+                    <div class="celebration-row" id="mehendi-row">
+                        <div class="event-column">
+                            <h3 class="event-title">
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                                <span>Mehendi</span>
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                            </h3>
+                            <p class="event-subtitle">
+                                Where Henna Adorns Hearts
+                            </p>
+                            <div class="event-details">
+                                <p>🕒 5:00 PM onwards</p>
+                                <p>📍 Our Residence, Kakinada</p>
+                            </div>
+                            <p class="event-quote">
+                                "The deeper the mehendi, the deeper the love."
+                            </p>
+                        </div>
+                        <div class="card-column">
+                            <div class="event-card locked" data-event="mehendi">
+                                <img src="assets/images/mehendi-card.png">
+                                <div class="card-overlay">
+                                    ✦ TAP TO REVEAL ✦
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WEDDING -->
+
+                    <div class="celebration-row" id="wedding-row">
+                        <div class="event-column">
+                            <h3 class="event-title">
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                                <span>Wedding</span>
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                            </h3>
+                            <p class="event-subtitle">
+                                The Sacred Beginning
+                            </p>
+                            <div class="event-details">
+                                <p>🕒 09:00 AM onwards</p>
+                                <p>📍 Wedding Hall, Kakinada</p>
+                            </div>
+                            <p class="event-quote">
+                            "Two hearts, one promise, a lifetime together."
+                            </p>
+                        </div>
+                        <div class="card-column">
+                            <div class="event-card locked" data-event="wedding">
+                                <img src="assets/images/wedding-card.png">
+                                <div class="card-overlay">
+                                    ✦ TAP TO REVEAL ✦
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LUNCH -->
+
+                    <div class="celebration-row last-row" id="lunch-row">
+                        <div class="event-column">
+                            <h3 class="event-title">
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                                <span>Lunch</span>
+                                <img src="assets/icons/haldi.svg" class="event-svg" alt="Haldi">
+                            </h3>
+                            <p class="event-subtitle">
+                                A Meal to Remember
+                            </p>
+                            <div class="event-details">
+                                <p>🕒 12:00 PM onwards</p>
+                                <p>📍 Wedding Venue, Kakinada</p>
+                            </div>
+                            <p class="event-quote">
+                                "Good food, great company, beautiful memories."
+                            </p>
+                        </div>
+                        <div class="card-column">
+                            <div class="event-card locked" data-event="lunch">
+                                <img src="assets/images/lunch-card.png">
+                                <div class="card-overlay">
+                                    ✦ TAP TO REVEAL ✦
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="divider">
+            <span class="line"></span>
+            <span class="ornament">❦</span>
+            <span class="line"></span>
+        </div>
+
+        <section id="gallery">
+
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="gallery-subtitle">
+                Capturing moments that will last forever.
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/gallery1.jpg" alt="" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery2.jpg" alt="" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery3.jpg" alt="" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery4.jpg" alt="" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery5.jpg" alt="" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery6.jpg" alt="" loading="lazy">
+                </div>
+            </div>
+
+        </section>
+
+        <div class="divider">
+            <span class="line"></span>
+            <span class="ornament">❦</span>
+            <span class="line"></span>
+        </div>
+
+        <section id="venue">
+
+            <h2 class="section-title">Wedding Venue</h2>
+            <p class="venue-subtitle">
+                We warmly invite you to celebrate our special day with us.
+            </p>
+            <div class="venue-container">
+                <div class="venue-card luxury-card">
+                    <div class="venue-sparkle sparkle-left">✦</div>
+                    <div class="venue-sparkle sparkle-right">✦</div>
+                    <div class="venue-icon">
+                        <div class="venue-icon-circle">
+                            🛕
+                        </div>
+                    </div>
+                    <h3>Sri Kantepudi Subbamma Community Hall</h3>
+                    <div class="venue-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+                            <defs>
+                                <linearGradient id="goldGradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%">
+                                    <stop offset="0%" stop-color="#F9E7A8"/>
+                                    <stop offset="45%" stop-color="#E4C96A"/>
+                                    <stop offset="100%" stop-color="#B88922"/>
+                                </linearGradient>
+                                <filter id="shadow"
+                                    x="-50%"
+                                    y="-50%"
+                                    width="200%"
+                                    height="200%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#B88922" flood-opacity="0.28"/>
+                                </filter>
+                            </defs>
+                            <g filter="url(#shadow)">
+
+                                <path
+                                d="M32 6
+                                C21 6 13 14 13 25
+                                C13 41 32 58 32 58
+                                C32 58 51 41 51 25
+                                C51 14 43 6 32 6Z"
+                                fill="url(#goldGradient)"
+                                stroke="#9B6B18"
+                                stroke-width="1.5"/>
+                                <circle
+                                cx="32"
+                                cy="25"
+                                r="8"
+                                fill="#FFF9EB"
+                                stroke="#C89B35"
+                                stroke-width="1.5"/>
+                                <circle
+                                cx="32"
+                                cy="25"
+                                r="3.5"
+                                fill="#D4AF37"/>
+                            </g>
+                        </svg>
+                        <span>Kakinada, Andhra Pradesh</span>
+                    </div>
+                    <div class="venue-info">
+                        <div class="venue-info-row">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64"
+                                width="70"
+                                height="70"
+                                fill="none">
+                                <defs>
+                                    <linearGradient id="goldGradient"
+                                        x1="0%"
+                                        y1="0%"
+                                        x2="100%"
+                                        y2="100%">
+                                        <stop offset="0%" stop-color="#FFF6D8"/>
+                                        <stop offset="35%" stop-color="#E9CF7C"/>
+                                        <stop offset="70%" stop-color="#D4AF37"/>
+                                        <stop offset="100%" stop-color="#A87416"/>
+                                    </linearGradient>
+                                    <filter id="shadow"
+                                        x="-50%"
+                                        y="-50%"
+                                        width="200%"
+                                        height="200%">
+                                        <feDropShadow
+                                        dx="0"
+                                        dy="2"
+                                        stdDeviation="2"
+                                        flood-color="#B8860B"
+                                        flood-opacity=".25"/>
+                                    </filter>
+                                </defs>
+                                <g filter="url(#shadow)">
+
+                                    <!-- Calendar Body -->
+
+                                    <rect
+                                    x="10"
+                                    y="14"
+                                    width="44"
+                                    height="40"
+                                    rx="8"
+                                    fill="url(#goldGradient)"
+                                    stroke="#9E7318"
+                                    stroke-width="1.5"/>
+
+                                    <!-- Header -->
+
+                                    <rect
+                                    x="10"
+                                    y="14"
+                                    width="44"
+                                    height="11"
+                                    rx="8"
+                                    fill="#C99A2C"/>
+
+                                    <!-- Binding Rings -->
+
+                                    <rect
+                                    x="19"
+                                    y="7"
+                                    width="4"
+                                    height="12"
+                                    rx="2"
+                                    fill="#8B6514"/>
+                                    <rect
+                                    x="41"
+                                    y="7"
+                                    width="4"
+                                    height="12"
+                                    rx="2"
+                                    fill="#8B6514"/>
+
+                                    <!-- Date Grid -->
+
+                                    <circle cx="22" cy="34" r="2.2" fill="#FFFDF5"/>
+                                    <circle cx="32" cy="34" r="2.2" fill="#FFFDF5"/>
+                                    <circle cx="42" cy="34" r="2.2" fill="#FFFDF5"/>
+                                    <circle cx="22" cy="44" r="2.2" fill="#FFFDF5"/>
+                                    <circle cx="32" cy="44" r="2.2" fill="#D4AF37"/>
+                                    <circle cx="42" cy="44" r="2.2" fill="#FFFDF5"/>
+                                </g>
+                            </svg>
+                            <div>
+                                <span class="info-label">Date</span>
+                                <span class="info-value">
+                                    Saturday, 5 September 2026
+                                </span>
+                            </div>
+                        </div>
+                        <div class="venue-info-row">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 64 64"
+                                width="58"
+                                height="58"
+                                fill="none">
+                                <defs>
+                                    <linearGradient id="goldGradient"
+                                        x1="0%"
+                                        y1="0%"
+                                        x2="100%"
+                                        y2="100%">
+                                        <stop offset="0%" stop-color="#FFF6D8"/>
+                                        <stop offset="35%" stop-color="#E9CF7C"/>
+                                        <stop offset="70%" stop-color="#D4AF37"/>
+                                        <stop offset="100%" stop-color="#A87416"/>
+                                    </linearGradient>
+                                    <filter id="shadow"
+                                        x="-50%"
+                                        y="-50%"
+                                        width="200%"
+                                        height="200%">
+                                        <feDropShadow
+                                        dx="0"
+                                        dy="2"
+                                        stdDeviation="2"
+                                        flood-color="#B8860B"
+                                        flood-opacity=".25"/>
+                                    </filter>
+                                </defs>
+                                <g filter="url(#shadow)">
+
+                                    <!-- Clock Outer Ring -->
+
+                                    <circle
+                                    cx="32"
+                                    cy="32"
+                                    r="22"
+                                    fill="url(#goldGradient)"
+                                    stroke="#9E7318"
+                                    stroke-width="1.6"/>
+
+                                    <!-- Inner Face -->
+
+                                    <circle
+                                    cx="32"
+                                    cy="32"
+                                    r="17"
+                                    fill="#FFFDF7"
+                                    stroke="#D4AF37"
+                                    stroke-width="1"/>
+
+                                    <!-- Hour Hand -->
+
+                                    <path
+                                    d="M32 32
+                                       L32 22"
+                                    stroke="#8A6113"
+                                    stroke-width="2.8"
+                                    stroke-linecap="round"/>
+
+                                    <!-- Minute Hand -->
+
+                                    <path
+                                    d="M32 32
+                                       L40 37"
+                                    stroke="#8A6113"
+                                    stroke-width="2.4"
+                                    stroke-linecap="round"/>
+
+                                    <!-- Center Dot -->
+
+                                    <circle
+                                    cx="32"
+                                    cy="32"
+                                    r="2.8"
+                                    fill="#D4AF37"/>
+
+                                    <!-- Top Crown -->
+
+                                    <rect
+                                    x="29"
+                                    y="7"
+                                    width="6"
+                                    height="4"
+                                    rx="2"
+                                    fill="#A87416"/>
+                                </g>
+                            </svg>
+                            <div>
+                                <span class="info-label">
+                                    Muhurtham
+                                </span>
+                                <span class="info-value">
+                                    10:46 AM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="venue-divider">
+                        <span></span>
+                        <img src="assets/images/lotus.png" class="divider-lotus" alt="Lotus">
+                        <span></span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/BrZD5XibP4AsRwrA6"
+                        target="_blank"
+                        class="venue-btn">
+                        <span class="btn-arrow">➜</span>
+                        <span>Get Directions</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="divider">
+            <span class="line"></span>
+            <span class="ornament">❦</span>
+            <span class="line"></span>
+        </div>
+
+        <section id="rsvp">
+
+            <h2 class="section-title">RSVP</h2>
+            <p class="rsvp-subtitle">
+                We would be delighted to celebrate this special day with you.
+                Kindly let us know if you'll be joining us.
+            </p>
+            <div class="rsvp-container">
+                <form class="rsvp-form luxury-card">
+                    <div class="rsvp-side-group">
+                        <p class="rsvp-side-label">Choose Your Side</p>
+                        <div class="side-toggle">
+                            <button type="button" class="side-icon" data-side="groom">
+                                <span class="icon-circle">
+                                    <img src="assets/images/rsvp/groom-icon.png" alt="Groom" class="side-img">
+                                </span>
+                                <span>Groom's Side</span>
+                            </button>
+                            <button type="button" class="side-icon" data-side="bride">
+                                <span class="icon-circle">
+                                    <img src="assets/images/rsvp/bride-icon.png" alt="Bride" class="side-img">
+                                </span>
+                                <span>Bride's Side</span>
+                            </button>
+                        </div>
+                        <input type="hidden" id="rsvpSide" name="side" required>
+                    </div>
+                    <input id="guestName" type="text" placeholder="Your Name" required>
+                    <input id="guestPhone" type="tel" placeholder="Phone Number" required>
+                    <div class="custom-select" id="attendanceSelect">
+                        <input type="hidden" id="attendanceValue" required>
+                        <button type="button" class="select-trigger">
+                            <span class="selected-text">
+                                Will you attend?
+                            </span>
+                            <span class="select-arrow">
+                                ▾
+                            </span>
+                        </button>
+                        <div class="select-options">
+                            <div class="select-option" data-value="yes">
+                                ❤️ Yes, I'll Be There
+                            </div>
+                            <div class="select-option" data-value="no">
+                                🌸 Unable to Attend, Sending My Best Wishes
+                            </div>
+                        </div>
+                    </div>
+                    <textarea id="guestWishes" rows="5" placeholder="Leave your wishes for the couple..." required></textarea>
+                    <button type="submit" class="rsvp-btn">
+                        <span class="btn-arrow">💌</span>
+                        <span>Send Wishes</span>
+                    </button>
+                </form>
+            </div>
+
+        </section>
+
+        <div class="divider">
+            <span class="line"></span>
+            <span class="ornament">❦</span>
+            <span class="line"></span>
+        </div>
+
+        <footer id="footer">
+
+            <div class="footer-content">
+                <h2>Thank You</h2>
+                <p>
+                    Your presence and blessings mean the world to us.
+                    We look forward to celebrating our special day with you.
+                </p>
+                <div class="footer-divider"></div>
+                <h3>Vijay ❤️ Himaja</h3>
+                <p class="footer-date">
+                    5 September 2026 • 10:46 AM
+                </p>
+                <p class="footer-location">
+                    📍 Sri Kantepudi Subbamma Community Hall
+                </p>
+                <div class="footer-social">
+                    <a href="#">📞 Call</a>
+                    <a href="#">💬 WhatsApp</a>
+                    <a href="https://www.google.com/maps/place/Kantipudi+Subbayamma+Chowdary+Kalyanamandapam/@16.9822079,82.246292,19.58z/data=!4m6!3m5!1s0x3a382843689aa1e7:0x8ed1f4df2123b37f!8m2!3d16.9823857!4d82.2458731!16s%2Fg%2F1tkb3jmy"
+                        target="_blank">
+                        📍 Map
+                    </a>
+                </div>
+                <p class="copyright">
+                    Made with ❤️ for our family & friends
+                </p>
+            </div>
+
+        </footer>
         
-
-    <!-- Floating Petals -->
-     <div id="petals-container"></div>
-     <div id="sparkles"></div>
-
-<div class="petals">
-    <span>🌸</span>
-    <span>🌺</span>
-    <span>🌸</span>
-    <span>🌼</span>
-    <span>🌸</span>
-    <span>🌺</span>
-    <span>🌸</span>
-    <span>🌼</span>
-    <span>🌸</span>
-    <span>🌺</span>
-</div>
-
-<div id="progressBar"></div>
-
-
-<!---<nav class="navbar">
-
-    <div class="logo">
-        Vijay <span>❤</span> Himaja
-    </div>
-
-    <div class="menu-toggle" id="menuToggle">
-
-    <span></span>
-
-    <span></span>
-
-    <span></span>
-
-</div>
-
-    <ul class="nav-links">
-
-        <li><a href="#top">Home</a></li>
-
-        <li><a href="#couple">Story</a></li>
-
-        <li><a href="#gallery">Gallery</a></li>
-
-        <li><a href="#venue">Venue</a></li>
-
-        <li><a href="#rsvp">RSVP</a></li>
-
-        <li>
-
-<button id="musicBtn">
-
-🎵
-
-</button>
-
-</li>
-
-    </ul>
-
-</nav> --->
-
-<div class="menu-overlay" id="menuOverlay"></div>
-
-
-<header class="hero" id="home">
-
-    <div class="hero-card">
-
-        <!-- Main Invitation -->
-        <img
-            src="assets/images/hero-card.png"
-            alt="Wedding Invitation"
-            class="hero-card-image">
-
-    </div>
-
-    <div class="hero-teaser" id="heroTeaser">
-
-    <div class="hero-teaser-icon">✨</div>
-
-    <p class="hero-teaser-text">
-
-        A Special Moment Awaits...
-
-    </p>
-
-    <div class="hero-scroll">
-
-        ↓ Scroll to Reveal ↓
-
-    </div>
-
-</div>
-
-    <!-- Wedding Date Section -->
-    <!--<div class="date-wrapper">-->
-
-        <!-- Actual Wedding Date -->
-        <!--<img
-            src="assets/images/wedding-date.png"
-            alt="Wedding Date"
-            class="date-image">-->
-
-        <!-- Scratch Foil -->
-        <!--<canvas id="scratchCanvas"></canvas>
-
-    </div> -->
-
-</header>
-
-<div id="dateRevealTrigger"></div>
-
-<!-- ==========================================
-        WEDDING DATE TEASER
-========================================== -->
-
-<!--<section id="dateTeaser" class="date-teaser">
-
-    <div class="teaser-content">
-
-        <div class="teaser-icon">✨</div>
-
-        <h2>One More Surprise Awaits...</h2>
-
-        <p>
-
-            Scratch to reveal our wedding date
-
-        </p>
-
-        <div class="scroll-indicator">
-
-            ↓
-
-        </div>
-
-    </div>
-
-</section>-->
-
-<div class="divider">
-    <span class="line"></span>
-    <span class="ornament">❦</span>
-    <span class="line"></span>
-</div>
-
-<section id="countdown">
-
-    <div class="countdown-container">
-
-        <h2 class="section-title">Counting Down to Our Forever</h2>
-
-        <p class="countdown-text">
-            Every second brings us closer to our special day.
-        </p>
-
-        <div class="countdown-boxes">
-
-            <div class="time-box luxury-card">
-                <div class="shine"></div>
-                <span id="days">00</span>
-                <p>Days</p>
-            </div>
-
-            <div class="time-box luxury-card">
-                <div class="shine"></div>
-                <span id="hours">00</span>
-                <p>HRS</p>
-            </div>
-
-            <div class="time-box luxury-card">
-                <div class="shine"></div>
-                <span id="minutes">00</span>
-                <p>MIN</p>
-            </div>
-
-            <div class="time-box luxury-card">
-                <div class="shine"></div>
-                <span id="seconds">00</span>
-                <p>SEC</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<div class="divider">
-    <span class="line"></span>
-    <span class="ornament">❦</span>
-    <span class="line"></span>
-</div>
-
-
-<section id="couple">
-
-    <h2 class="section-title couple-title">Meet the Couple</h2>
-
-    <div class="couple-container">
-
-        <div class="person-card">
-
-            <img src="assets/images/Groom.png" alt="Groom" loading="lazy">
-
-            <h3>Vijay</h3>
-
-            <p>The Groom</p>
-
-            
-
-        </div>
-
-        <div class="heart-divider">
-            ❤️
-        </div>
-
-        <div class="person-card">
-
-            <img src="assets/images/bride.jpg" alt="Bride" loading="lazy">
-
-            <h3>Himaja</h3>
-
-            <p>The Bride</p>
-
-            
-
-        </div>
-
-    </div>
-
-    <!-- TODO (Final Photos):
-Replace current couple portraits with final wedding portraits.
-Optimize crop and alignment after receiving edited images.
--->
-
-</section>
-
-<div class="divider">
-    <span class="line"></span>
-    <span class="ornament">❦</span>
-    <span class="line"></span>
-</div>
-
-<section id="story">
-
-    <h2 class="section-title">Our Celebration Journey</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3>Engagement</h3>
-                <p>Two families came together to celebrate the beginning of our forever.</p>
+        <div id="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <span class="lightbox-prev">&#10094;</span>
+            <img id="lightbox-image" alt="Gallery Image">
+            <span class="lightbox-next">&#10095;</span>
+            <div class="lightbox-counter">
+                <span id="currentImage">1</span> /
+                <span id="totalImages">6</span>
             </div>
         </div>
+        <button id="backToTop">
+            ↑
+        </button>
 
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3>Haldi</h3>
-                <p>A joyful ceremony filled with laughter, blessings, and vibrant colors.</p>
+    </main>
+
+    <!-- ==========================================
+            Wedding Date Reveal Overlay
+    ========================================== -->
+
+    <div id="dateOverlay" class="date-overlay">
+        <div class="date-modal">
+            <div class="scratch-wrapper">
+                <img src="assets/images/wedding-date.png" class="overlay-date-image">
+                <canvas id="overlayScratchCanvas"></canvas>
+            </div>
+            <div id="continueHint" class="continue-hint">
+                Tap anywhere to continue
             </div>
         </div>
-
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3>🌿 Mehendi</h3>
-                <p>Beautiful henna designs, music, and unforgettable memories with loved ones.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3>💒 Wedding</h3>
-                <p>Join us as we begin our new journey together with your love and blessings.</p>
-            </div>
-        </div>
-
     </div>
 
-</section>
+    <!--====================================
+                CELEBRATION MODAL
+    =====================================-->
 
-<section id="gallery">
-
-    <h2 class="section-title">Our Gallery</h2>
-
-    <p class="gallery-subtitle">
-        Capturing moments that will last forever.
-    </p>
-
-    <div class="gallery-grid">
-
-        <div class="gallery-item">
-            <img src="assets/images/gallery1.jpg" alt="" loading="lazy">
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/images/gallery2.jpg" alt="" loading="lazy">
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/images/gallery3.jpg" alt="" loading="lazy">
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/images/gallery4.jpg" alt="" loading="lazy">
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/images/gallery5.jpg" alt="" loading="lazy">
-        </div>
-
-        <div class="gallery-item">
-            <img src="assets/images/gallery6.jpg" alt="" loading="lazy">
-        </div>
-
-    </div>
-
-</section>
-
-<section id="venue">
-
-    <h2 class="section-title">Wedding Venue</h2>
-
-    <p class="venue-subtitle">
-        We warmly invite you to celebrate our special day with us.
-    </p>
-
-    <div class="venue-container">
-
-        <div class="venue-card luxury-card">
-
-            <div class="venue-icon">📍</div>
-
-            <h3>Sri Kantepudi Subbamma Kamma Sanga Community Hall</h3>
-
-            <div class="venue-badge">
-    📍 Kakinada, Andhra Pradesh
-</div>
-
-            <p><strong>📅 Date:</strong> Saturday, 5 September 2026</p>
-
-<p><strong>⏰ Time:</strong> 10:46 AM onwards</p>
-
-            <hr class="venue-divider">
-
-<a href="https://www.google.com/maps/place/Kantipudi+Subbayamma+Chowdary+Kalyanamandapam/@16.9822079,82.246292,19.58z/data=!4m6!3m5!1s0x3a382843689aa1e7:0x8ed1f4df2123b37f!8m2!3d16.9823857!4d82.2458731!16s%2Fg%2F1tkb3jmy?authuser=0&entry=ttu&g_ep=EgoyMDI2MDcyMS4wIKXMDSoASAFQAw%3D%3D"
-               target="_blank"
-               class="venue-btn">
-               View on Google Maps
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="schedule">
-
-    <h2 class="section-title">Wedding Schedule</h2>
-
-    <p class="schedule-subtitle">
-        Join us as we celebrate these beautiful moments together.
-    </p>
-
-    <div class="schedule-container">
-
-        <div class="schedule-card">
-            <div class="schedule-icon">🌼</div>
-            <h3>Haldi Ceremony</h3>
-            <p>Friday, 4 September 2026</p>
-            <span>9:00 AM</span>
-        </div>
-
-        <div class="schedule-card">
-            <div class="schedule-icon">🌿</div>
-            <h3>Mehendi Ceremony</h3>
-            <p>Friday, 4 September 2026</p>
-            <span>5:00 PM</span>
-        </div>
-
-        <div class="schedule-card highlight">
-            <div class="featured-tag">Main Event</div>
-            <div class="schedule-icon">💒</div>
-            <h3>Wedding Ceremony</h3>
-            <p>Saturday, 5 September 2026</p>
-            <span>10:46 AM</span>
-        </div>
-
-        <div class="schedule-card">
-            <div class="schedule-icon">🍽️</div>
-            <h3>Lunch</h3>
-            <p>Immediately After Wedding</p>
-            <span>All Guests Welcome</span>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="rsvp">
-
-    <h2 class="section-title">RSVP</h2>
-
-    <p class="rsvp-subtitle">
-        We would be delighted to celebrate this special day with you.
-        Kindly let us know if you'll be joining us.
-    </p>
-
-    <div class="rsvp-container">
-
-        <form class="rsvp-form luxury-card">
-
-            <input type="text"
-                   placeholder="Your Name"
-                   required>
-
-            <input type="tel"
-                   placeholder="Phone Number"
-                   required>
-
-            <select required>
-
-                <option value="">Will you attend?</option>
-
-                <option>Yes, I'll be there ❤️</option>
-
-                <option>Sorry, I can't attend</option>
-
-            </select>
-
-            <textarea
-                rows="5"
-                placeholder="Leave your wishes for the couple..."></textarea>
-
-            <button type="submit">
-                Send Wishes 💌
+    <div id="celeV2Modal" class="cele-v2-modal">
+        <div class="cele-v2-dialog">
+            <button
+                id="celeV2Close"
+                class="cele-v2-close"
+                aria-label="Close">
+                &times;
             </button>
+            <div class="cele-v2-header">
+                <h3 id="celeV2Title"></h3>
+            </div>
+            <div id="celeV2Body" class="cele-v2-body">
 
-        </form>
+                <section id="haldiActivity" class="cele-activity">
 
-    </div>
+                    <div class="haldi-container">
+                        <img
+                        id="haldiCard"
+                        class="haldi-card"
+                        src="assets/images/haldi-card.png"
+                        alt="Haldi Invitation">
+                        <canvas id="haldiScratchCanvas"></canvas>
+                        <button
+                            id="haldiRevealBtn"
+                            class="haldi-reveal-btn">
+                            ▶ Reveal
+                        </button>
+                    </div>
 
-</section>
+                </section>
 
-<footer id="footer">
+                <section id="mehendiActivity" class="cele-activity">
 
-    <div class="footer-content">
+                    <div class="mehendi-container">
+                        <img
+                        id="mehendiCard"
+                        class="mehendi-card"
+                        src="assets/images/mehendi/mehendi-0.png"
+                        alt="Mehendi">
+                        <canvas id="mehendiCanvas"></canvas>
+                        <button
+                            id="mehendiRevealBtn"
+                            class="haldi-reveal-btn">
+                            ▶ Reveal
+                        </button>
+                    </div>
+                    <div id="mehendiFinalCard" class="mehendi-final-card">
+                        <img
+                        src="assets/images/mehendi-card.png"
+                        alt="Mehendi Invitation">
+                    </div>
 
-        <h2>Thank You</h2>
+                </section>
 
-        <p>
-            Your presence and blessings mean the world to us.
-            We look forward to celebrating our special day with you.
-        </p>
+                <section id="weddingActivity" class="cele-activity">
 
-        <div class="footer-divider"></div>
+                    <div class="wedding-container">
+                        <img
+                        id="weddingActivityImage"
+                        class="wedding-activity-image"
+                        src="assets/images/wedding-activity.png"
+                        alt="Wedding Activity">
+                        <img
+                        id="weddingDrum"
+                        class="wedding-drum"
+                        src="assets/images/drum.png"
+                        alt="Wedding Drum">
+                        <div id="drumRipple"></div>
+                        <div id="weddingProgress" class="wedding-progress">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <img
+                        id="weddingCard"
+                        class="wedding-card"
+                        src="assets/images/wedding-card.png"
+                        alt="Wedding Invitation">
+                        <button
+                            id="weddingRevealBtn"
+                            class="haldi-reveal-btn">
+                            ▶ Reveal
+                        </button>
+                    </div>
 
-        <h3>Vijay ❤️ Himaja</h3>
+                </section>
 
-        <p class="footer-date">
-            5 September 2026 • 10:46 AM
-        </p>
+                <section id="lunchActivity" class="cele-activity">
 
-        <p class="footer-location">
-            📍 Sri Kantepudi Subbamma Kamma Sanga Community Hall
-        </p>
+                    <div class="lunch-container">
+                        <img
+                        id="lunchActivityImage"
+                        class="lunch-activity-image"
+                        src="assets/images/lunch/lunch-activity-1.png"
+                        alt="Lunch Activity">
+                        <img
+                        id="lunchHand"
+                        class="lunch-hand"
+                        src="assets/images/lunch/hand.png"
+                        alt="Hand">
+                        <img
+                        id="lunchCard"
+                        class="lunch-card"
+                        src="assets/images/lunch-card.png"
+                        alt="Lunch Invitation">
+                        <button
+                            id="lunchRevealBtn"
+                            class="haldi-reveal-btn">
+                            ▶ Reveal
+                        </button>
+                    </div>
 
-        <div class="footer-social">
+                </section>
 
-            <a href="#">📞 Call</a>
-
-            <a href="#">💬 WhatsApp</a>
-
-            <a href="https://www.google.com/maps/place/Kantipudi+Subbayamma+Chowdary+Kalyanamandapam/@16.9822079,82.246292,19.58z/data=!4m6!3m5!1s0x3a382843689aa1e7:0x8ed1f4df2123b37f!8m2!3d16.9823857!4d82.2458731!16s%2Fg%2F1tkb3jmy"
-               target="_blank">
-               📍 Map
-            </a>
-
+            </div>
+            <p id="celeV2Instruction"></p>
+            <div id="celeV2Hint">
+            ✦Tap outside the invitation to continue✦
+            </div>
         </div>
-
-        <p class="copyright">
-            Made with ❤️ for our family & friends
-        </p>
-
     </div>
 
-</footer>
-
-
-    <source src="assets/music/wedding.mp3" type="audio/mpeg">
-</audio>
-
-
-<div id="lightbox">
-
-    <span class="close-lightbox">&times;</span>
-
-    <span class="lightbox-prev">&#10094;</span>
-
-    <img id="lightbox-image" alt="Gallery Image">
-
-    <span class="lightbox-next">&#10095;</span>
-
-    <div class="lightbox-counter">
-        <span id="currentImage">1</span> /
-        <span id="totalImages">6</span>
-    </div>
-
-</div>
-
-<div id="successPopup">
-
-    <div class="popup-card">
-
-        <div class="popup-heart">❤️</div>
-
-        <h2>Thank You!</h2>
-
-        <p>Your wishes have been received.</p>
-
-        <button id="closePopup">Close</button>
-
-        <p class="privacy-note">
-    Your contact details will only be used for wedding communication.
-</p>
-
-    </div>
-
-</div>
-
-<button id="backToTop">
-
-↑
-
-</button>
-
-
-
-
-
-
-</main>
-
-<!-- ==========================================
-        Wedding Date Reveal Overlay
-========================================== -->
-
-<div id="dateOverlay" class="date-overlay">
-
-    <div class="date-modal">
-
-        <div class="scratch-wrapper">
-
-    <img
-        src="assets/images/wedding-date.png"
-        class="overlay-date-image">
-
-    <canvas id="overlayScratchCanvas"></canvas>
-
-</div>
-
-        <div id="continueHint" class="continue-hint">
-
-            Tap anywhere to continue
-
+    <div id="rsvpSuccess" class="rsvp-success">
+        <div class="success-card">
+            <img
+            src="assets/images/lotus.png"
+            class="success-lotus"
+            alt="Lotus">
+            <h2 id="successTitle">Thank You!</h2>
+            <p id="successMessage1">Your RSVP has been received with love.</p>
+            <p id="successMessage2">We can't wait to celebrate this beautiful day with you.</p>
+            <span id="successDate">5 September 2026 ❤️</span>
+            <button
+                id="successClose"
+                class="success-btn">
+                Continue
+            </button>
         </div>
-
     </div>
 
-</div>
+    <audio id="landingMusic" loop preload="auto">
+        <source src="assets/music/landing.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="openingMusic" preload="none">
+        <source src="assets/music/opening.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="weddingMusic" loop preload="none">
+        <source src="assets/music/wedding.mp3" type="audio/mpeg">
+    </audio>
 
-<script src="js/script.js"></script>
-
-<audio id="landingMusic" loop preload="auto">
-    <source src="assets/music/landing.mp3" type="audio/mpeg">
-</audio>
-
-<audio id="openingMusic" preload="auto">
-    <source src="assets/music/opening.mp3" type="audio/mpeg">
-</audio>
-
-<audio id="weddingMusic" loop preload="auto">
-    <source src="assets/music/wedding.mp3" type="audio/mpeg">
-</audio>
-
-<script src="js/audio.js"></script>
-<script src="js/landing.js"></script>
-
-
-
+    <script src="js/script.js"></script>
+    <script src="celebrations/state.js"></script>
+    <script src="celebrations/activity.js"></script>
+    <script src="celebrations/controller.js"></script>
+    <script src="celebrations/timeline.js"></script>
+    <script src="celebrations/haldi.js"></script>
+    <script src="celebrations/mehendi.js"></script>
+    <script src="celebrations/wedding.js"></script>
+    <script src="celebrations/lunch.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/landing.js"></script>
 
 </body>
 

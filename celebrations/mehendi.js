@@ -195,18 +195,19 @@ Mehendi.getMaskColor=function(x,y){
 Mehendi.draw=function(x,y){
     if(this.revealed) return;
     const c=this.getMaskColor(x,y);
+    const max=Math.max(c.r,c.g,c.b);
     let petal=null;
-    if(c.r>200){
+    if(max<150){
+        return;
+    }
+    else if(c.r===max){
         petal="left";
     }
-    else if(c.g>200){
+    else if(c.g===max){
         petal="top";
     }
-    else if(c.b>200){
-        petal="right";
-    }
     else{
-        return;
+        petal="right";
     }
     if(this[petal+"Done"]) return;
     this.ctx.beginPath();

@@ -266,7 +266,7 @@ Mehendi.completePetal=function(petal){
         setTimeout(()=>{
             console.log("Calling reveal...");
             this.reveal();
-        },800);
+        },1000);
     }
 }
 

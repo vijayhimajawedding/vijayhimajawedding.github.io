@@ -42,7 +42,7 @@ Lunch.init=function(){
         this.hand.style.display = "none";
         setTimeout(()=>{
             this.reveal();
-        },700);
+        },1000);
     };
     this.bindEvents();
 }

@@ -1668,14 +1668,18 @@ section{
     height:35px;
     border:none;
     border-radius:50%;
-    background:#E7C35A,;
+    background:linear-gradient(
+        135deg,
+        #E7C35A,
+        #D4AF37,
+        #B88724
+    );
     color:white;
-    font-size:50px;
+    font-size:45px;
     line-height:1;
     text-align:center;
     justify-items: center;
     cursor:pointer;
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
     transition:
         transform .25s ease,
         background .25s ease,

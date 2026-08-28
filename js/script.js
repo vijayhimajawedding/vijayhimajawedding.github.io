@@ -603,7 +603,7 @@ document.getElementById("successClose").addEventListener("click",()=>{
     document.getElementById("rsvpSide").value = "";
 });
 
-document.getElementsById("RsvpClose").addEventListener("click",()=>{
+document.getElementById("RsvpClose").addEventListener("click",()=>{
     document.getElementById("rsvpSuccess").classList.remove("show");
     rsvpForm.reset();
     selectedText.textContent = "Will you attend?";

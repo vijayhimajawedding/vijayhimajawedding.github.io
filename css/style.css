@@ -1668,14 +1668,9 @@ section{
     height:35px;
     border:none;
     border-radius:50%;
-    background:linear-gradient(
-        135deg,
-        #E7C35A,
-        #D4AF37,
-        #B88724
-    );
+    background:#E7C35A;
     color:white;
-    font-size:45px;
+    font-size:40px;
     line-height:1;
     text-align:center;
     justify-items: center;

@@ -1518,6 +1518,39 @@ section{
     transform:translateX(5px);
 }
 
+.rsvp-btn:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+    animation:none;
+    box-shadow:none;
+    transform:none;
+}
+
+.rsvp-btn:disabled::before{
+    animation:none;
+    display:none;
+}
+
+.google-signin-group{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    padding:6px 0 2px;
+}
+
+.signed-in-as{
+    display:none;
+    color:#7A5B3A;
+    font-size:14px;
+    font-weight:600;
+    text-align:center;
+}
+
+.signed-in-as.show{
+    display:block;
+}
+
 .btn-arrow{
     font-size:22px;
     line-height:1;

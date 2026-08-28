@@ -74,12 +74,35 @@ function initGoogleSignIn(){
         );
     }
 
-    // Note: we deliberately don't call google.accounts.id.prompt()
-    // here, since that would trigger an automatic One Tap popup the
-    // moment the page loads - while the intro video/seal-click
-    // sequence is still showing. The rendered button inside the
-    // RSVP form is enough, and appears naturally once a guest
-    // scrolls down to RSVP.
+    // We deliberately don't call prompt() immediately here, since
+    // that would trigger the One Tap popup the moment the page
+    // loads - while the intro video/seal-click sequence is still
+    // showing. Instead we wait until the RSVP section actually
+    // scrolls into view, then fire prompt() once. The rendered
+    // button stays as a fallback for guests where One Tap doesn't
+    // fire (no active Google session, previously dismissed, etc.)
+
+    watchForRsvpSection();
+}
+
+let oneTapPrompted = false;
+
+function watchForRsvpSection(){
+    const rsvpSection = document.getElementById("googleSignInDiv")?.closest("section")
+        || document.getElementById("googleSignInDiv");
+    if(!rsvpSection) return;
+
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting && !oneTapPrompted){
+                oneTapPrompted = true;
+                google.accounts.id.prompt(); // fires the One Tap UI if eligible
+                observer.disconnect();
+            }
+        });
+    },{ threshold:0.3 });
+
+    observer.observe(rsvpSection);
 }
 
 window.addEventListener("load", initGoogleSignIn);

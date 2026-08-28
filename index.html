@@ -45,7 +45,7 @@
             muted
             playsinline
             preload="auto">
-            <source src="assets/videos/intro-compressed.mp4" type="video/mp4">
+            <source src="assets/videos/intro.mp4" type="video/mp4">
         </video>
         <button id="seal"></button>
     </div>
@@ -656,6 +656,13 @@
                     </div>
                     <input id="guestName" type="text" placeholder="Your Name" required>
                     <input id="guestPhone" type="tel" placeholder="Phone Number" required>
+                    <div class="google-signin-group">
+                        <p class="rsvp-side-label">Verify with Google to RSVP</p>
+                        <div id="googleSignInDiv"></div>
+                        <p id="googleSignedInAs" class="signed-in-as"></p>
+                        <input type="hidden" id="guestEmail" required>
+                        <input type="hidden" id="guestGoogleName">
+                    </div>
                     <div class="custom-select" id="attendanceSelect">
                         <input type="hidden" id="attendanceValue" required>
                         <button type="button" class="select-trigger">
@@ -676,7 +683,7 @@
                         </div>
                     </div>
                     <textarea id="guestWishes" rows="5" placeholder="Leave your wishes for the couple..." required></textarea>
-                    <button type="submit" class="rsvp-btn">
+                    <button type="submit" class="rsvp-btn" disabled>
                         <span class="btn-arrow">💌</span>
                         <span>Send Wishes</span>
                     </button>
@@ -910,7 +917,9 @@
         <source src="assets/music/wedding.mp3" type="audio/mpeg">
     </audio>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="js/script.js"></script>
+    <script src="js/google-auth.js"></script>
     <script src="celebrations/state.js"></script>
     <script src="celebrations/activity.js"></script>
     <script src="celebrations/controller.js"></script>

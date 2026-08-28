@@ -1,8 +1,6 @@
-const landingMusic = document.getElementById("landingMusic");
 const openingMusic = document.getElementById("openingMusic");
 const weddingMusic = document.getElementById("weddingMusic");
 
-landingMusic.volume = 0;
 openingMusic.volume = 0;
 weddingMusic.volume = 0;
 
@@ -43,35 +41,20 @@ function crossFade(fromAudio, toAudio, duration = 1000, targetVolume = 1) {
 }
 
 function pauseAllMusic() {
-    landingMusic.pause();
     openingMusic.pause();
     weddingMusic.pause();
 }
 
 function resumeAppropriateMusic() {
-
-    // Guard against firing while the tab is still actually hidden
-    // (e.g. a stray "focus" event) or when nothing is unlocked yet
     if (document.hidden) return;
-
     if (document.getElementById("landingContainer")) {
-
-        if (!introUnlocked) {
-
-            landingMusic.play().catch(() => {});
-
-        } else {
-
+        // Only resume opening music after the seal has been opened
+        if (introUnlocked) {
             openingMusic.play().catch(() => {});
-
         }
-
     } else {
-
         weddingMusic.play().catch(() => {});
-
     }
-
 }
 
 document.addEventListener("visibilitychange", () => {

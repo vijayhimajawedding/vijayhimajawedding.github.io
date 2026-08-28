@@ -1,10 +1,5 @@
 // Elements
 
-window.addEventListener("load", () => {
-    landingMusic.volume = 0.35;
-    landingMusic.play()
-});
-
 // Countdown
 
 const weddingDate = new Date("September 5, 2026 10:46:00").getTime();

@@ -15,8 +15,6 @@ seal.addEventListener("click", () => {
     seal.style.pointerEvents = "none";
     seal.style.animation = "none";
     introUnlocked = true;
-    landingMusic.pause();
-    landingMusic.currentTime = 0;
     openingMusic.volume = 1;
     openingMusic.currentTime = 0;
     const t = introVideo.currentTime;

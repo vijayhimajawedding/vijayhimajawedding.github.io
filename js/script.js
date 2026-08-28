@@ -603,6 +603,25 @@ document.getElementById("successClose").addEventListener("click",()=>{
     document.getElementById("rsvpSide").value = "";
 });
 
+document.getElementsById("RsvpClose").addEventListener("click",()=>{
+    document.getElementById("rsvpSuccess").classList.remove("show");
+    rsvpForm.reset();
+    selectedText.textContent = "Will you attend?";
+    hiddenInput.value = "";
+    customSelect.classList.remove("error");
+    options.forEach(option=>{
+        option.classList.remove("selected");
+    });
+    document.querySelectorAll(".side-icon").forEach(icon=>{
+            icon.classList.remove(
+                "selected",
+                "pop"
+            );
+        });
+
+    document.getElementById("rsvpSide").value = "";
+});
+
 trigger.addEventListener("click", () => {
     customSelect.classList.toggle("open");
 });

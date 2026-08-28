@@ -580,11 +580,20 @@ if(data.attendance === "yes"){
 }
 
 document.getElementById("rsvpSuccess").classList.add("show");
+
+// Auto-close after 5s if the guest doesn't tap Continue themselves.
+// Cleared inside closeRsvpSuccess() so it never double-fires if
+// they close it manually first.
+
+clearTimeout(rsvpSuccessAutoCloseTimer);
+rsvpSuccessAutoCloseTimer = setTimeout(closeRsvpSuccess, 5000);
 });
 
 const rsvpForm = document.querySelector(".rsvp-form");
+let rsvpSuccessAutoCloseTimer = null;
 
-document.getElementById("successClose").addEventListener("click",()=>{
+function closeRsvpSuccess(){
+    clearTimeout(rsvpSuccessAutoCloseTimer);
     document.getElementById("rsvpSuccess").classList.remove("show");
     rsvpForm.reset();
     selectedText.textContent = "Will you attend?";
@@ -601,26 +610,10 @@ document.getElementById("successClose").addEventListener("click",()=>{
         });
 
     document.getElementById("rsvpSide").value = "";
-});
+}
 
-document.getElementById("RsvpClose").addEventListener("click",()=>{
-    document.getElementById("rsvpSuccess").classList.remove("show");
-    rsvpForm.reset();
-    selectedText.textContent = "Will you attend?";
-    hiddenInput.value = "";
-    customSelect.classList.remove("error");
-    options.forEach(option=>{
-        option.classList.remove("selected");
-    });
-    document.querySelectorAll(".side-icon").forEach(icon=>{
-            icon.classList.remove(
-                "selected",
-                "pop"
-            );
-        });
-
-    document.getElementById("rsvpSide").value = "";
-});
+document.getElementById("successClose").addEventListener("click", closeRsvpSuccess);
+document.getElementById("RsvpClose").addEventListener("click", closeRsvpSuccess);
 
 trigger.addEventListener("click", () => {
     customSelect.classList.toggle("open");
